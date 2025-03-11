@@ -35,7 +35,7 @@ const Login = () => {
                   Don't have an account?
                 </p>
                 <Link
-                  className="inline-block text-gray-500 hover:text-gray-700 ml-1"
+                  className="inline-block text-gray-900 hover:text-gray-700 ml-1"
                   to="/signup"
                 >
                   Sign up
