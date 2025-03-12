@@ -4,7 +4,7 @@ const Sidebar = () => {
   return (
     <>
       <div>
-        <label className="input">
+        <label className="input w-[250px] rounded-lg">
           <svg
             className="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
