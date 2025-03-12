@@ -18,7 +18,7 @@ const Dashboard = () => {
         </div>
         <div className="w-screen">
           <Mainbar />
-          <label className="input w-dvh h-14 flex items-center gap-2 border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-blue-500 ">
+          <label className="input w-full h-14 flex items-center gap-2 border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-blue-500 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -34,6 +34,15 @@ const Dashboard = () => {
               placeholder="Type a message"
               className="w-full bg-transparent focus:outline-none "
             />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              width="24"
+              height="24"
+            >
+              <path d="M2.01 21L23 12 2.01 3v7l15 2-15 2v7z" />
+            </svg>
           </label>
         </div>
       </div>
