@@ -18,6 +18,7 @@ const Dashboard = () => {
         </div>
         <div className="w-screen">
           <Mainbar />
+
           <label className="input w-full h-14 flex items-center gap-2 border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-blue-500 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
