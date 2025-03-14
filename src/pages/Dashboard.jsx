@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import Mainbar from "../components/Mainbar";
+import { useNavigate } from "react-router-dom";
+import { supabase } from "../client/client";
 
 const Dashboard = () => {
+  const [userName, setUserName] = useState("");
+
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    // Sign out the user
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      console.error("Error signing out:", error.message);
+    } else {
+      // Navigate to the login page after successful logout
+      navigate("/");
+    }
+  };
+
   return (
     <div className="h-screen max-w-screen">
       <div className="flex content-around h-full w-full">
@@ -14,6 +30,12 @@ const Dashboard = () => {
             <p className="m-1 p-1">User</p>
           </div>
           <Sidebar />
+          <button
+            onClick={handleLogout}
+            className="btn btn-neutral w-full mt-4 rounded-lg p-2 text-center text-white bg-red-600 hover:bg-red-700"
+          >
+            Logout
+          </button>
           <h2>Chat Users</h2>
         </div>
         <div className="w-screen">

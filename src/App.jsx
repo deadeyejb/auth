@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import RootLayout from "./layout/rootLayout";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
+import Wrapper from "./pages/Wrapper";
 
 function App() {
   const router = createBrowserRouter(
@@ -15,7 +16,22 @@ function App() {
       <>
         <Route path="login" element={<Login />} />
         <Route path="/" element={<Signup />} />
-        <Route path="dashboard" element={<Dashboard />} />
+        {/* <Route
+          path="dashboard"
+          element={
+            <Wrapper>
+              <Dashboard />
+            </Wrapper>
+          }
+        /> */}
+        <Route
+          path="dashboard"
+          element={
+            <Wrapper>
+              <Dashboard />
+            </Wrapper>
+          }
+        />
       </>
     )
   );
